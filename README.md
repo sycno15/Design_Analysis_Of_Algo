@@ -14,6 +14,8 @@ Design_Analysis_Algo/
 │   └── bellmanFord.py
 ├── Optimal-Binary-Search-Tree/
 │   └── optimalBinarySearchTree.py
+├── Graph-Coloring/
+│   └── graphColoring.py
 └── README.md
 ```
 

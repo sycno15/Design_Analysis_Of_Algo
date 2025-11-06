@@ -1,83 +1,76 @@
-# Design_Analysis_Algo
+# Graph Coloring Algorithm
 
-This repository contains implementations of classical **Design and Analysis of Algorithms**. Each algorithm is implemented in a separate module with clear examples, making it easy for learning, experimentation, and reference.
+## Description
 
-## 🐭 Repository Structure
+This implementation of the **Graph Coloring** algorithm assigns colors to vertices of a graph such that no two adjacent vertices share the same color. It uses a **backtracking approach** to explore possible color assignments and ensures valid coloring using a limited number of colors.
+
+## How It Works
+
+1. **Graph Representation:** The graph is represented as an adjacency matrix.
+2. **Backtracking:** The algorithm attempts to color each vertex recursively.
+3. **Validation:** Before assigning a color, it checks that adjacent vertices are not already assigned the same color.
+4. **Result:** If all vertices can be colored, the solution is displayed; otherwise, it reports that no valid coloring exists.
+
+## Example Graphs
+
+Two demo graphs are used:
+
+* **Graph 1:** A sparse graph with 6 vertices and selective edges.
+* **Graph 2:** A dense (complete) graph with 5 vertices.
+
+## Example Output
 
 ```
-Design_Analysis_Algo/
-├── Longest-Common-Subsequence/
-│   └── longestCommonSubsequence.py
-├── Longest-Repeating-Subsequence/
-│   └── longestRepeatingSubsequence.py
-├── Bellman-Ford-Algo/
-│   └── bellmanFord.py
-├── Optimal-Binary-Search-Tree/
-│   └── optimalBinarySearchTree.py
-├── Graph-Coloring/
-│   └── graphColoring.py
-└── README.md
+For Graph 1:
+Vertex 1 ---> Color 1
+Vertex 2 ---> Color 2
+Vertex 3 ---> Color 3
+Vertex 4 ---> Color 1
+Vertex 5 ---> Color 2
+Vertex 6 ---> Color 3
+
+For Graph 2:
+No solution exists with 3 colors.
 ```
 
-## 🧩 Algorithms Included
+## Usage
 
-1. **Longest Common Subsequence (LCS)**
-   Finds the longest subsequence common to two sequences. Useful in text comparison, DNA sequencing, and version control.
-
-2. **Longest Repeating Subsequence (LRS)**
-   Finds the longest subsequence that appears **at least twice** in a sequence without overlapping. Useful in pattern analysis.
-
-3. **Bellman-Ford Algorithm**
-   Computes shortest paths from a single source vertex to all other vertices in a weighted graph. Supports negative weight edges.
-
-4. **Optimal Binary Search Tree (OBST)**
-   Constructs a BST that **minimizes search cost** given a set of keys with access probabilities.
-
-## ⚡ Usage Example
-
-1. Clone the repository:
+1. Navigate to the folder:
 
 ```bash
-git clone https://github.com/yourusername/Design_Analysis_Algo.git
-cd Design_Analysis_Algo
+cd Graph-Coloring
 ```
 
-2. Navigate to the algorithm folder and run the code:
+2. Run the script:
 
 ```bash
-# Example: Longest Common Subsequence
-cd Longest-common-subsequence
-python longestCommonSubsequence.py
+python graphColoring.py
 ```
 
-## 🗑️ Example
+3. The program prints the color assigned to each vertex (if possible).
 
-**LCS Example:**
+## Complexity
 
-```python
-X = "AGGTAB"
-Y = "GXTXAYB"
-# Output: Length of LCS is 4
-```
+* **Time Complexity:** O(m^V), where V is the number of vertices and m is the number of colors.
+* **Space Complexity:** O(V) for storing color assignments.
 
-**Bellman-Ford Example:**
+## Applications
 
-```python
-# Weighted graph with 5 vertices
-# Source = 0
-# Output: Shortest distances from source 0: 0 -1 2 -2 1
-```
+* Scheduling problems
+* Register allocation in compilers
+* Map coloring
+* Frequency assignment in wireless networks
 
-## ⏱️ Time & Space Complexities
+## Contributing
 
-| Algorithm    | Time Complexity | Space Complexity |
-| ------------ | --------------- | ---------------- |
-| LCS          | O(m*n)          | O(m*n)           |
-| LRS          | O(n^2)          | O(n^2)           |
-| Bellman-Ford | O(V*E)          | O(V)             |
-| OBST         | O(n^3)          | O(n^2)           |
+Contributions are welcome! You can:
 
+* Improve algorithm efficiency
+* Add additional test graphs
+* Extend the implementation with heuristics
 
-## 📜 License
+Please fork the repository, create a new branch, and submit a pull request.
 
-This project is licensed under the **MIT License**.
+## License
+
+This project is licensed under the MIT License.
